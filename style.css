@@ -1,0 +1,337 @@
+/* Globals---------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #22212C;
+  --text-color: #837E9F;
+  --bg-cards: #302F3D;
+  --bg-techs: #CB92B1;
+}
+
+body {
+  background: var(--body-bg-color);
+  color: var(--text-color);
+
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+main {
+  padding: 2.5rem;
+
+  display: flex;
+  gap: 3.75rem;
+}
+
+.left-content {
+  max-width: 21.75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+div.card {
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  background: var(--bg-cards);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+/* Left content */
+
+/* Profile Div------------------------------------ */
+.profile {
+  height: 18.25rem;
+
+  text-align: center;
+}
+
+.profile svg {
+  margin: 2rem 0 1.875rem 0;
+}
+
+.profile h2 {
+  font-size: 1.438rem;
+  margin-bottom: 0.625rem;
+}
+
+.profile span {
+  font-size: 0.813rem;
+}
+
+/* Links Div------------------------------------ */
+.links {
+  padding: 1.875rem 2.5rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Apply style only if there is a .link element before */
+.link+.link {
+  margin-top: 1.25rem;
+}
+
+.link a {
+  font-size: 0.75rem;
+}
+
+/* Technologies Div------------------------------------ */
+.technologies {
+  padding: 1.875rem 1.875rem 1.875rem 1.25rem;
+}
+
+.technologies .title {
+  margin-bottom: 1.25rem;
+}
+
+.technologies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.938rem;
+  justify-content: center;
+}
+
+.technologies-grid span {
+  color: #000000;
+  background: #CB92B1;
+
+  width: 5.375rem;
+  font-weight: 700;
+  font-size: 0.625rem;
+  text-align: center;
+
+  padding: 0.375rem 0;
+  border-radius: 30px;
+}
+
+/* Experiences Div------------------------------------ */
+.experiences {
+  padding: 1.875rem 0 1.875rem 1.25rem;
+}
+
+.experiences .title {
+  margin-bottom: 1.25rem;
+}
+
+.experiences ul {
+  margin-left: 2.5rem;
+}
+
+.experiences li+li {
+  margin-top: 0.8rem;
+}
+
+.experiences li h2 {
+  font-size: 0.875rem;
+}
+
+.year-of-work {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+li p:last-child {
+  font-size: 0.75rem;
+}
+
+/* Education Div------------------------------------ */
+.education {
+  padding: 1.875rem 0 1.875rem 1.25rem;
+}
+
+.education .title {
+  margin-bottom: 1.25rem;
+}
+
+.education ul {
+  margin-left: 2.5rem;
+}
+
+.education li+li {
+  margin-top: 0.8rem;
+}
+
+.education li h2 {
+  font-size: 0.875rem;
+}
+
+.year-of-work {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+li p:last-child {
+  font-size: 0.75rem;
+}
+
+/* Main content */
+
+/* Projects ------------------------------------ */
+.main-content {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.projects-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.875rem;
+}
+
+.projects-bar a {
+  font-size: 0.875rem;
+}
+
+.projects-wrapper {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.project {
+  padding: 1.875rem;
+
+  /* used for clickable card */
+  position: relative;
+}
+
+.project header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 1.375rem;
+}
+
+.project header span {
+  font-weight: 700;
+}
+
+.project a {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  /* used for clickable card */
+  z-index: 1;
+}
+
+/* used for clickable card */
+.project a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+.project footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1.875rem;
+}
+
+.project footer .feedback {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback .star {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback .star span {
+  font-size: 0.875rem;
+}
+
+.feedback .branch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback .branch span {
+  font-size: 0.875rem;
+}
+
+footer .languages {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.languages span {
+  font-size: 0.875rem;
+}
+
+/* Posts ------------------------------------ */
+.posts-bar {
+  padding: 1.875rem;
+}
+
+.post {
+  padding: 1.938rem 0 2.625rem 1.875rem;
+  display: flex;
+  gap: 1.25rem;
+
+  /* used for clickable card */
+  position: relative;
+}
+
+.post h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.post a {
+  font-size: 0.875rem;
+
+  /* used for clickable card */
+  z-index: 1;
+}
+
+/* used for clickable card */
+.post a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+.post p {
+  margin: 1.75rem 0 0.688rem 0;
+}
+
+.post footer {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
